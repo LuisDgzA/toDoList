@@ -1,0 +1,201 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: rgba(192, 192, 192, 0.1);
+    font-family: 'Archivo',    sans-serif;
+    ;
+    
+}
+.container {
+   
+    width: 420px;
+    margin: 20px auto;
+    
+    
+}
+
+
+
+.header {
+    width: 420px;
+    height: 200px;
+    background: #d33030;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+
+
+.custom-shape-divider-bottom-1612903822 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    
+}
+
+.custom-shape-divider-bottom-1612903822 svg  {
+    position: relative;
+    display: block;
+    width: 120%;
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1612903822 .shape-fill {
+    fill: #ffa500;
+}
+
+#title{
+    position: absolute;    
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2.4em;
+}
+
+#date{
+    margin-right: 20px;
+    position: absolute;
+    right:0;
+    bottom:0;
+    color: #000;
+    font-size: 2em;
+    z-index: 999;
+}
+
+.content {
+    width: 420px;
+    height: 440px;
+    max-height: 440px;
+    background-color: #FFF;
+    overflow: auto;
+    overflow-x: hidden;
+    /* mozilla*/
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    width: 420px;
+    background: #F2EFE9;
+    min-height: 55px;
+    position: relative;    
+    border-bottom: 1px solid white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    
+}
+
+.item i.co {
+    position: absolute;
+    font-size: 20px;
+    padding-left: 5px;
+    left: 15px;
+    line-height: 55px;
+}
+
+.item i.co:hover {
+    cursor: pointer;
+}
+
+.fa-check-circle {
+    color: #44CF6C;
+}
+
+.item p.text {
+    position: absolute;
+    padding: 0;
+    
+    font-size: 20px;
+    left: 60px;    
+    line-height: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 285px;
+    
+}
+
+
+
+.lineThrough {
+    text-decoration: line-through;
+    color: #8a8989;
+}
+
+.item i.de {
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    line-height: 55px;
+}
+
+.item i.de:hover {
+    color: #af0000;
+    cursor: pointer;
+}
+
+.add-to-do {
+    position: relative;
+    width: 420px;
+    height: 60px;
+    background-color: #FFF;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.add-to-do i {
+    position: absolute;
+    font-size: 40px;
+    
+    color: #0075F2;
+}
+
+.add-to-do input {
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 370px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+    
+}
+
+.add-to-do input[type="text"]:focus{
+    
+    outline: none;
+}
+
+
+
+.add-to-do input::placeholder {
+    /* Firefox 19+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
