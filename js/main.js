@@ -34,14 +34,16 @@ if(data){
 
 function loadList(array){
     array.forEach(item => {
-        addToDo(item.name, item.id, item.done);
+        addToDo(item.name, item.id, item.done, item.trash);
     });
 }
 
 
 
-function addToDo(toDo, id, done){
-    
+function addToDo(toDo, id, done, trash){
+    if(trash){
+        return;
+    }
     const DONE = done ? CHECK : UNCHECKED;
     const LINE = done ? LINE_THROUGH : "";
     const item =
@@ -66,7 +68,8 @@ document.addEventListener("keyup", function(event){
             LIST.push({
                 name: toDo,
                 id: id,
-                done: false
+                done: false,
+                trash: false
             })
             localStorage.setItem("TODO", JSON.stringify(LIST));
             list.lastChild.scrollIntoView();;
@@ -84,8 +87,8 @@ buttonAddToDo.addEventListener("click", e => {
         LIST.push({
             name: toDo,
             id: id,
-            done: false
-            
+            done: false,
+            trash: false
         })
         localStorage.setItem("TODO", JSON.stringify(LIST));
 
@@ -107,8 +110,8 @@ function removeToDo(element){
     
     element.parentNode.parentNode.removeChild(element.parentNode);
 
+    LIST[element.id].trash = true;
     
-    LIST.splice(element.id, 1);
     localStorage.setItem("TODO", JSON.stringify(LIST));
 }
 
