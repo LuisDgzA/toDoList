@@ -72,7 +72,7 @@ document.addEventListener("keyup", function(event){
                 trash: false
             })
             localStorage.setItem("TODO", JSON.stringify(LIST));
-            list.lastChild.scrollIntoView();;
+            list.lastChild.scrollIntoView();
             id++;
         }
         input.value = "";
@@ -95,6 +95,8 @@ buttonAddToDo.addEventListener("click", e => {
         id++;
     }
     input.value = "";
+    list.lastChild.scrollIntoView();
+
     input.focus();
 })
 
